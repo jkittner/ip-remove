@@ -15,22 +15,25 @@ pip install git+https://github.com/theendlessriver13/ip-remove.git@master
 ### Usage
 
 ```console
-usage: ip-remove [-h] [-V] [--log-nr LOG_NR] [--dry-run] logfile
+usage: ip-remove [-h] [-V] [--log-nr LOG_NR] [--anonymize [ANONYMIZE]] [--dry-run] logfile
 
 remove ipv4 and ipv6 addresses from a file
 
 positional arguments:
-  logfile          path to logfile
+  logfile               path to logfile
 
 optional arguments:
-  -h, --help       show this help message and exit
-  -V, --version    show program's version number and exit
-  --log-nr LOG_NR  number of the log to change e.g. foo.log.1
-  --dry-run        print what would have been done, make no changes
+  -h, --help            show this help message and exit
+  -V, --version         show program's version number and exit
+  --log-nr LOG_NR       number of the log to change e.g. foo.log.1
+  --anonymize [ANONYMIZE]
+                        anonymize the ip address by replacing the last n digits with 0
+  --dry-run             print what would have been done, make no changes
 ```
 
 - remove the ip from `foo.txt`: `ip-remove foo.txt`
 - test with a dry run first `ip-remove foo.txt --dry-run` and get the output to stdout without modifying the file
+- use `ip-remove foo.txt --anonymize 2` to replace the last two digits of the IP address
 
 ### Usage with `logrotate`
 
@@ -47,6 +50,7 @@ example config:
     postrotate
         /home/runner/venv/bin/ip-remove $1 --log-nr 7
     endscript
+}
 ```
 
 - you can specify `--log-nr 7` to only remove the ip addresses from the 7th rotated log (e.g. in `logrotate` after seven days when using `daily`)
