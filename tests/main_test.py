@@ -173,7 +173,7 @@ def test_anonymize_too_many_digits(ip, exp, test_file, capsys):
     ) in captured.out
     assert (
         '\u001b[33mWARNING: anonymize is set larger than 8. '
-        'IPv6 will be rewritten to 0.0.0.0.0.0.0.0\u001b[0m\n'
+        'IPv6 will be rewritten to 0:0:0:0:0:0:0:0\u001b[0m\n'
     ) in captured.out
 
 

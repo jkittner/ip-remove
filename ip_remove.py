@@ -64,7 +64,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     parser.add_argument('logfile', help='path to logfile', type=str)
     parser.add_argument(
         '--log-nr',
-        help='number of the log to change e.g. foo.log.1',
+        help='number of the log to change e.g. foo.log.1 (for logrotate)',
         type=int,
     )
     parser.add_argument(
@@ -98,7 +98,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
                 if args.anonymize > 8:
                     print(
                         '\u001b[33mWARNING: anonymize is set larger than 8. '
-                        'IPv6 will be rewritten to 0.0.0.0.0.0.0.0\u001b[0m',
+                        'IPv6 will be rewritten to 0:0:0:0:0:0:0:0\u001b[0m',
                     )
                 sub_ips = {
                     IpAdress(i.group(), _ip_type(i.group()))
