@@ -27,7 +27,7 @@ optional arguments:
   -V, --version         show program's version number and exit
   --log-nr LOG_NR       number of the log to change e.g. foo.log.1
   --anonymize [ANONYMIZE]
-                        anonymize the ip address by replacing the last n digits with 0
+                        anonymize the ip address by replacing the last n octets with 0
   --dry-run             print what would have been done, make no changes
 ```
 
