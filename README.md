@@ -1,6 +1,6 @@
-[![ci](https://github.com/theendlessriver13/ip-remove/workflows/ci/badge.svg)](https://github.com/theendlessriver13/ip-remove/actions?query=workflow%3Aci)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/theendlessriver13/ip-remove/master.svg)](https://results.pre-commit.ci/latest/github/theendlessriver13/ip-remove/master)
-[![codecov](https://codecov.io/gh/theendlessriver13/ip-remove/branch/master/graph/badge.svg)](https://codecov.io/gh/theendlessriver13/ip-remove)
+[![ci](https://github.com/jkittner/ip-remove/workflows/ci/badge.svg)](https://github.com/jkittner/ip-remove/actions?query=workflow%3Aci)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/jkittner/ip-remove/master.svg)](https://results.pre-commit.ci/latest/github/jkittner/ip-remove/master)
+[![codecov](https://codecov.io/gh/jkittner/ip-remove/branch/master/graph/badge.svg)](https://codecov.io/gh/jkittner/ip-remove)
 
 # ip-remove
 
@@ -9,7 +9,7 @@ ip-remove removes ipv4 and ipv6 addresses from a file. This can be useful when I
 ### installation
 
 ```bash
-pip install git+https://github.com/theendlessriver13/ip-remove.git@master
+pip install git+https://github.com/jkittner/ip-remove.git@master
 ```
 
 ### Usage
